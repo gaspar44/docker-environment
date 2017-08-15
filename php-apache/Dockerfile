@@ -5,6 +5,6 @@ FROM apache
 RUN apt-get update && apt-get install -y php libapache2-mod-php php-mcrypt php-mysql nodejs npm
 
 # Instalamos jquery
-RUN npm install jquery
+RUN npm install jquery -g
 
 COPY dir.conf /etc/apache2/mods-available/dir.conf
