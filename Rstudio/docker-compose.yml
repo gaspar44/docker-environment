@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  rstudio:
+    image: gaspar44/rstudio
+
+    environment:
+      - DISPLAY=$DISPLAY
+
+    volumes:
+    - $HOME/.Xauthority:/root/.Xauthority:ro
+    - $HOME/Codigos/R:/root/RHome
+
+    network_mode: host
